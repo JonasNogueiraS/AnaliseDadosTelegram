@@ -87,3 +87,7 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# CREDENTIALS GOOGLE DRIVE / GOOGLE DRIVE BOT
+credentials.json
+

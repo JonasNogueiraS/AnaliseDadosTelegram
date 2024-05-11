@@ -59,10 +59,7 @@ class BotTelegram:
             return
              
         else:
-            figure = r"D:\Jonas\Documents\visua\python\novoProjeto\Projetoyt\graph_last_generate.png"
-            files = {
-                "photo": open(figure, "rb")
-            }
-            link_para_enviar = f"{self.url}sendphoto?chat_id={chat_id}"
-            requests.post(link_para_enviar, files= files)
+            answer.seek(0)
+            requests.post(f"{self.url}sendphoto?chat_id={chat_id}", files= dict(photo=answer))
+            answer.close()
             return

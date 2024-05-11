@@ -1,10 +1,9 @@
 from src.BotTelegram import BotTelegram
-from src.DriveBot import DriveBot
+from src.data.DriveBot import DriveBot
 
-#bot = BotTelegram()
-#bot.start()
+bot = BotTelegram()
+bot.start()
 
-Botdrive = DriveBot()
-print(Botdrive.get_data())
+
 
 

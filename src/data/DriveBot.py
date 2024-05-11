@@ -14,7 +14,7 @@ class DriveBot:
         link_google_sheet = os.getenv("LINK_SHEET")
         sh = self.gc.open_by_key(link_google_sheet)
         worksheet = sh.sheet1
-        dataframe = pd.DataFrame(worksheet.get_all_records())
+        dataframe = pd.DataFrame(worksheet.get_all_records(numericise_ignore=['all']))
         return dataframe
         
 
